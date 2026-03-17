@@ -57,7 +57,7 @@ export default function LandingPage() {
   return (
     <div className="flex min-h-screen flex-col overflow-hidden">
       {/* Header */}
-      <header className="sticky top-0 z-50 border-b border-white/10 bg-white/70 px-4 py-3 backdrop-blur-xl sm:px-6 sm:py-4">
+      <header className="sticky top-0 z-50 border-b border-white/10 bg-white/70 px-4 py-3 backdrop-blur-xl safe-top sm:px-6 sm:py-4">
         <div className="mx-auto flex max-w-6xl items-center justify-between">
           <span className="text-lg font-bold sm:text-xl">
             <span className="gradient-text">StudyBoost</span>
@@ -78,12 +78,12 @@ export default function LandingPage() {
       </header>
 
       {/* Hero */}
-      <section className="relative flex flex-1 flex-col items-center justify-center px-4 py-16 text-center sm:px-6 sm:py-28">
+      <section className="relative flex flex-1 flex-col items-center justify-center px-4 py-12 text-center sm:px-6 sm:py-20 md:py-28">
         {/* Background decorations */}
         <div className="pointer-events-none absolute inset-0 overflow-hidden">
-          <div className="absolute -top-40 right-0 h-[500px] w-[500px] rounded-full bg-gradient-to-br from-indigo-200/40 to-violet-200/40 blur-3xl animate-float" />
-          <div className="absolute -bottom-40 left-0 h-[400px] w-[400px] rounded-full bg-gradient-to-tr from-blue-200/30 to-cyan-200/30 blur-3xl animate-float-delayed" />
-          <div className="absolute top-1/2 left-1/2 h-[300px] w-[300px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-gradient-to-r from-violet-100/20 to-indigo-100/20 blur-3xl animate-pulse-slow" />
+          <div className="absolute -top-40 right-0 h-[250px] w-[250px] rounded-full bg-gradient-to-br from-indigo-200/40 to-violet-200/40 blur-3xl animate-float sm:h-[500px] sm:w-[500px]" />
+          <div className="absolute -bottom-40 left-0 h-[200px] w-[200px] rounded-full bg-gradient-to-tr from-blue-200/30 to-cyan-200/30 blur-3xl animate-float-delayed sm:h-[400px] sm:w-[400px]" />
+          <div className="absolute top-1/2 left-1/2 hidden -translate-x-1/2 -translate-y-1/2 rounded-full bg-gradient-to-r from-violet-100/20 to-indigo-100/20 blur-3xl animate-pulse-slow sm:block sm:h-[300px] sm:w-[300px]" />
         </div>
 
         <div className="relative z-10 animate-fade-in">
@@ -92,7 +92,7 @@ export default function LandingPage() {
             Powered by Claude AI
           </div>
 
-          <h1 className="mx-auto max-w-3xl text-4xl font-extrabold tracking-tight sm:text-5xl md:text-6xl lg:text-7xl">
+          <h1 className="mx-auto max-w-3xl text-3xl font-extrabold tracking-tight sm:text-4xl md:text-5xl lg:text-7xl">
             Upload a PDF.
             <br />
             <span className="gradient-text">Get a complete study kit.</span>
@@ -132,7 +132,7 @@ export default function LandingPage() {
           <p className="mx-auto mb-10 max-w-2xl text-center text-muted-foreground sm:mb-14">
             Everything you need to ace your exams, all generated from a single PDF upload.
           </p>
-          <div className="grid gap-4 sm:grid-cols-2 sm:gap-6 lg:grid-cols-3">
+          <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 sm:gap-5 md:gap-6 lg:grid-cols-3">
             {features.map((feature, i) => (
               <div
                 key={feature.title}
@@ -188,7 +188,7 @@ export default function LandingPage() {
 
       {/* CTA */}
       <section className="px-4 py-16 sm:px-6 sm:py-24">
-        <div className="mx-auto max-w-4xl rounded-2xl bg-gradient-to-r from-indigo-600 to-violet-600 p-8 text-center shadow-2xl shadow-indigo-500/25 sm:p-14">
+        <div className="mx-auto max-w-4xl rounded-2xl bg-gradient-to-r from-indigo-600 to-violet-600 p-6 text-center shadow-2xl shadow-indigo-500/25 sm:p-10 md:p-14">
           <h2 className="mb-4 text-2xl font-bold text-white sm:text-3xl md:text-4xl">
             Ready to study smarter?
           </h2>
@@ -205,7 +205,7 @@ export default function LandingPage() {
       </section>
 
       {/* Footer */}
-      <footer className="border-t px-6 py-8 text-center">
+      <footer className="border-t px-4 py-6 text-center safe-bottom sm:px-6 sm:py-8">
         <p className="text-sm text-muted-foreground">
           <span className="gradient-text font-semibold">StudyBoost</span> &mdash; AI-Powered Study Assistant
         </p>

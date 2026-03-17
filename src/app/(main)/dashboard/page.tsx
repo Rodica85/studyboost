@@ -69,7 +69,7 @@ export default function DashboardPage() {
   const limitReached = usage && !usage.canUpload;
 
   return (
-    <div className="mx-auto max-w-4xl px-4 py-6 sm:px-6 sm:py-10 animate-fade-in">
+    <div className="mx-auto max-w-4xl px-4 py-5 sm:px-6 sm:py-8 md:py-10 animate-fade-in safe-bottom">
       {/* Header */}
       <div className="mb-8 flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
         <div>
@@ -114,9 +114,9 @@ export default function DashboardPage() {
 
       {/* Upgrade Banner */}
       {limitReached && (
-        <div className="mb-8 overflow-hidden rounded-2xl border border-amber-200 bg-gradient-to-r from-amber-50 to-orange-50 p-6 text-center shadow-sm sm:p-8">
-          <div className="mx-auto mb-4 flex h-14 w-14 items-center justify-center rounded-2xl bg-gradient-to-br from-amber-500 to-orange-500 shadow-lg shadow-amber-500/25">
-            <Lock className="h-6 w-6 text-white" />
+        <div className="mb-6 overflow-hidden rounded-2xl border border-amber-200 bg-gradient-to-r from-amber-50 to-orange-50 p-5 text-center shadow-sm sm:mb-8 sm:p-6 md:p-8">
+          <div className="mx-auto mb-3 flex h-12 w-12 items-center justify-center rounded-2xl bg-gradient-to-br from-amber-500 to-orange-500 shadow-lg shadow-amber-500/25 sm:mb-4 sm:h-14 sm:w-14">
+            <Lock className="h-5 w-5 text-white sm:h-6 sm:w-6" />
           </div>
           <h2 className="mb-2 text-xl font-bold text-amber-900">
             Free upload limit reached
@@ -136,7 +136,7 @@ export default function DashboardPage() {
         onDragOver={(e) => { e.preventDefault(); if (!limitReached) setDragOver(true); }}
         onDragLeave={() => setDragOver(false)}
         onDrop={handleDrop}
-        className={`group relative mb-10 overflow-hidden rounded-2xl border-2 border-dashed px-4 py-14 text-center transition-all duration-300 sm:px-6 sm:py-20 ${
+        className={`group relative mb-6 overflow-hidden rounded-2xl border-2 border-dashed px-4 py-10 text-center transition-all duration-300 sm:mb-10 sm:px-6 sm:py-16 md:py-20 ${
           limitReached
             ? "border-gray-200 bg-gray-50/50 opacity-50"
             : dragOver

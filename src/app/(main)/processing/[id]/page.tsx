@@ -63,7 +63,7 @@ export default function ProcessingPage() {
 
   if (error) {
     return (
-      <div className="flex min-h-[60vh] flex-col items-center justify-center px-6 text-center animate-fade-in">
+      <div className="flex min-h-[60vh] flex-col items-center justify-center px-4 text-center animate-fade-in sm:px-6">
         <div className="mx-auto mb-6 flex h-16 w-16 items-center justify-center rounded-2xl bg-red-100">
           <span className="text-2xl">!</span>
         </div>
@@ -82,19 +82,19 @@ export default function ProcessingPage() {
   }
 
   return (
-    <div className="flex min-h-[60vh] flex-col items-center justify-center px-6 text-center animate-fade-in">
+    <div className="flex min-h-[60vh] flex-col items-center justify-center px-4 text-center animate-fade-in sm:px-6">
       {/* Background decorations */}
       <div className="pointer-events-none absolute inset-0 overflow-hidden">
-        <div className="absolute top-1/3 left-1/4 h-[300px] w-[300px] rounded-full bg-gradient-to-br from-indigo-200/30 to-violet-200/30 blur-3xl animate-pulse-slow" />
-        <div className="absolute bottom-1/3 right-1/4 h-[250px] w-[250px] rounded-full bg-gradient-to-tr from-blue-200/20 to-cyan-200/20 blur-3xl animate-float" />
+        <div className="absolute top-1/3 left-1/4 h-[150px] w-[150px] rounded-full bg-gradient-to-br from-indigo-200/30 to-violet-200/30 blur-3xl animate-pulse-slow sm:h-[300px] sm:w-[300px]" />
+        <div className="absolute bottom-1/3 right-1/4 hidden rounded-full bg-gradient-to-tr from-blue-200/20 to-cyan-200/20 blur-3xl animate-float sm:block sm:h-[250px] sm:w-[250px]" />
       </div>
 
       <div className="relative z-10">
-        <div className="mx-auto mb-8 flex h-20 w-20 items-center justify-center rounded-3xl bg-gradient-to-br from-indigo-600 to-violet-600 shadow-xl shadow-indigo-500/25">
-          <Loader2 className="h-9 w-9 animate-spin text-white" />
+        <div className="mx-auto mb-6 flex h-16 w-16 items-center justify-center rounded-2xl bg-gradient-to-br from-indigo-600 to-violet-600 shadow-xl shadow-indigo-500/25 sm:mb-8 sm:h-20 sm:w-20 sm:rounded-3xl">
+          <Loader2 className="h-7 w-7 animate-spin text-white sm:h-9 sm:w-9" />
         </div>
 
-        <h1 className="mb-3 text-2xl font-bold sm:text-3xl">
+        <h1 className="mb-2 text-xl font-bold sm:mb-3 sm:text-2xl md:text-3xl">
           <span className="gradient-text">AI is working...</span>
         </h1>
 
@@ -117,7 +117,7 @@ export default function ProcessingPage() {
           ))}
         </div>
 
-        <p className="mt-8 text-xs text-muted-foreground">
+        <p className="mt-6 text-xs text-muted-foreground sm:mt-8">
           This usually takes under 60 seconds
         </p>
       </div>
