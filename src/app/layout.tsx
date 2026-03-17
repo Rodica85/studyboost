@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Inter, JetBrains_Mono } from "next/font/google";
+import { PWARegister } from "@/components/PWARegister";
 import "./globals.css";
 
 const inter = Inter({
@@ -16,6 +17,16 @@ export const metadata: Metadata = {
   title: "StudyBoost — AI-Powered Study Assistant",
   description:
     "Upload a PDF and get a complete study kit: summary, key points, exam questions, flashcards, references, and draft work.",
+  manifest: "/manifest.json",
+  icons: {
+    icon: "/icons/icon-192.png",
+    apple: "/icons/icon-192.png",
+  },
+  appleWebApp: {
+    capable: true,
+    statusBarStyle: "default",
+    title: "StudyBoost",
+  },
 };
 
 export default function RootLayout({
@@ -27,13 +38,12 @@ export default function RootLayout({
     <html lang="en">
       <head>
         <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
-        <meta name="theme-color" content="#4f46e5" />
-        <meta name="apple-mobile-web-app-capable" content="yes" />
-        <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+        <link rel="apple-touch-icon" href="/icons/icon-192.png" />
       </head>
       <body
         className={`${inter.variable} ${jetbrainsMono.variable} antialiased`}
       >
+        <PWARegister />
         {children}
       </body>
     </html>
